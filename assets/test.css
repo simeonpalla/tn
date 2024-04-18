@@ -1,0 +1,93 @@
+html {
+    font-size: 63%;
+}
+body {
+    font-size: 1.5rem;
+    line-height: 2.75rem;
+    font-weight: 400;
+    font-family: 'HelveticaNeue', sans-serif,'Open Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    /* color: beige; */
+}
+.report {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px 0.5fr 3fr 3fr 3fr 3fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "header header header header header header"
+    "dropdown1 dropdown1 dropdown1 dropdown2 dropdown2 dropdown2"
+    "ac_stat ac_stat ac_stat pc_stat pc_stat pc_stat"
+    "ac_sum_tab ac_sum_tab ac_sum_tab ac_sum_tab ac_sum_tab ac_sum_tab"
+    "pc_sum_tab pc_sum_tab pc_sum_tab pc_sum_tab pc_sum_tab pc_sum_tab"
+    "bar1 bar1 bar2 bar2 bar3 bar3";
+}
+.header {
+    grid-area: header;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    line-height: 1.05;
+    color: #2f9ec7;
+    text-transform: uppercase;
+}
+.dropdown1{
+    grid-area: dropdown1;
+    border: none;
+    /* background: #ddf0f9; */
+    outline: none;
+    border-radius: 22px;
+    padding: 9px 20px 9px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dropdown2{
+    grid-area: dropdown2;
+    border: none;
+    /* background: #bae1f3; */
+    outline: none;
+    border-radius: 22px;
+    padding: 9px 20px 9px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ac_stat{
+    grid-area: ac_stat;
+}
+.pc_stat{
+    grid-area: pc_stat;
+}
+.ac_sum_tab{
+    grid-area: ac_sum_tab;
+}
+.pc_sum_tab{
+    grid-area: pc_sum_tab;
+}
+.bar1{
+    grid-area: bar1;
+}
+.bar2{
+    grid-area: bar2;
+}
+.bar3{
+    grid-area: bar3;
+}
+
+@media only screen and (max-width: 1200px) {
+.report{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+grid-template-areas:
+"header"
+"dropdown1"
+"dropdown2"
+"ac_stat"
+"pc_stat"
+"ac_sum_tab"
+"pc_sum_tab"
+"bar1"
+"bar2"
+"bar3";
+}
+.Header{
+    font-size: 1.2em;
+}
+}
